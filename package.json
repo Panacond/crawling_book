@@ -1,5 +1,16 @@
 {
   "dependencies": {
-    "node-fetch": "^2.7.0"
-  }
+    "jsdom": "^26.1.0",
+    "node-fetch": "^2.7.0",
+    "ytdl-mp3": "^5.2.2"
+  },
+  "name": "crawling_book-main",
+  "version": "1.0.0",
+  "description": "[this site](https://knigavuhe.org/book/vudkhauz-pehlem-polozhites-na-psmita/)",
+  "main": "download_audio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

@@ -1,10 +1,9 @@
-// Import the 'fs' module for file system operations
 const fs = require('fs');
 // Import 'node-fetch' to use fetch API in Node.js
 // Make sure you've installed it: npm install node-fetch@2
 const fetch = require('node-fetch');
 
-const baseUrl = "https://s12.knigavuhe.org/1/audio/4960/";
+const baseUrl = "https://s10.knigavuhe.org/1/audio/38745/";
 const outputDir = "./audio_downloads/"; // Directory to save files
 
 // Ensure the output directory exists
@@ -13,11 +12,12 @@ if (!fs.existsSync(outputDir)) {
 }
 
 async function downloadAudioSeries() {
-    for (let i = 1; i <= 66; i++) {
+    for (let i = 1; i <= 42; i++) {
         // Format the number with a leading zero if it's a single digit
         const fileNumber = String(i).padStart(2, '0'); // '1' becomes '01', '10' stays '10'
-        const filename = `${fileNumber}.mp3`;
-        const fileUrl = `${baseUrl}${filename}?1`; // Construct the full URL
+        // const fileNumber = i;
+        const filename = `koroli-${fileNumber}.mp3`;
+        const fileUrl = `${baseUrl}${filename}`; // Construct the full URL
         const outputPath = `${outputDir}${filename}`; // Full path for saving
 
         console.log(`Attempting to download: ${fileUrl} to ${outputPath}`);
